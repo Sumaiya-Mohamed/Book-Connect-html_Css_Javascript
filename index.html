@@ -27,7 +27,7 @@
     />
 
     <script src="./scripts.js" type="module" defer></script> 
-    <script src="./data.js" ></script>
+    <script src="./data.js " type="module" defer ></script>
     <!--Added a type attribute because we are dealing with imports and exports(modules) and added the defer attribute-->
     
   </head>
@@ -118,7 +118,7 @@
         <form class="overlay__form" data-search-form id="search"> <!--This is the form that appears when the user wants to search for a book-->
           <label class="overlay__field">
             <div class="overlay__label">Title</div>
-            <input class="overlay__input" data-search-title name="title" placeholder="Any"></input>
+            <input class="overlay__input" data-search-title name="title" placeholder="Any">
           </label>
 
           <label class="overlay__field">
@@ -155,7 +155,7 @@
 
         <div class="overlay__row">
           <button class="overlay__button" data-settings-cancel>Cancel</button>
-          <button class="overlay__button overlay__button_primary" type="submit" form="settings">Save</button>
+          <button class="overlay__button overlay__button_primary" data-settings-submit type="submit" form="settings">Save</button>
         </div>
       </div>
     </dialog>
