@@ -1,7 +1,9 @@
-# Author:  Sumaiya Mohamed
+# Author:  
+Sumaiya Mohamed
 
-# Title:  Sumaiya-Mohamed/SUMMOH081_FTC2301_GROUPB_SumaiyaMohamed_ITW19
-  **(Book Connect App)**
+# Title: 
+ Sumaiya-Mohamed/SUMMOH081_FTC2301_GROUPB_SumaiyaMohamed_ITW19
+  _(Book Connect App)_git
 
 # Technologies Used:
 * HTML
