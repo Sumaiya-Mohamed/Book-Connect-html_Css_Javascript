@@ -3,7 +3,7 @@ Sumaiya Mohamed
 
 # Title: 
  Sumaiya-Mohamed/SUMMOH081_FTC2301_GROUPB_SumaiyaMohamed_ITW19
-  _(Book Connect App)_git
+  _(Book Connect App)_
 
 # Technologies Used:
 * HTML
