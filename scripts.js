@@ -1,5 +1,5 @@
 import {BOOKS_PER_PAGE, authors, genres , books} from "./data.js" 
-
+//@ts-check
 const matches = books;
 
 
