@@ -13,22 +13,29 @@ if (!range || range.length < 2) {
   throw new Error('Range must be an array with two numbers');
 }
 
- /** The code below deals with displaying the book lists.
- *  @param {object}  booksToRender
+ 
+
+/** The code below deals with displaying the book lists.
+ *  @param {object[]} booksToRender - Array of books to render
  */
 
-const bookList = document.querySelector('[data-list-items]');
+
+const bookList = document.querySelector('[data-list-items]'); 
 const fragment = document.createDocumentFragment(); 
 let currentPage = 1; // add currentPage variable to keep track of the current page
 
 
-const createBookOverlay = (booksToRender) => { // modify function to receive a parameter of books to render
+
+
+const createBookOverlay = (booksToRender) => {
   for (let i = 0; i < booksToRender.length; i++) {
     const { author: authorId, id, image, title } = booksToRender[i];
+
 
     const element = document.createElement('button');
     element.className = 'preview';
     element.setAttribute('data-preview', id);
+
 
     element.innerHTML = /* html */ `
       <img class="preview__image" src="${image}" />
@@ -37,6 +44,7 @@ const createBookOverlay = (booksToRender) => { // modify function to receive a p
         <div class="preview__author">${authors[authorId]}</div>
       </div>
     `;
+
 
     fragment.appendChild(element); 
   
@@ -49,6 +57,11 @@ const createBookOverlay = (booksToRender) => { // modify function to receive a p
    }
 bookList.appendChild(fragment); 
 };
+
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   const startIndex = 0; // start rendering books from the beginning
@@ -67,7 +80,12 @@ const loadMoreButton = document.querySelector('[data-list-button]');
 
 loadMoreButton.textContent = 'Show More';
 
-loadMoreButton.addEventListener('click', () => {
+ 
+/*
+ * This function handles the displaying of more books when the show more
+ * button is clicked on.
+ */
+const loadMoreBooks =  () => {
  
   const startIndex = currentPage * BOOKS_PER_PAGE; // get the starting index of the books to render
   const endIndex = startIndex + BOOKS_PER_PAGE; // get the ending index of the books to render
@@ -83,9 +101,9 @@ loadMoreButton.addEventListener('click', () => {
   } else {
     loadMoreButton.innerHTML = `Show more (${matches.length - endIndex})`;
   }
-});
+};
 
-
+loadMoreButton.addEventListener('click',loadMoreBooks)
 
 
 
