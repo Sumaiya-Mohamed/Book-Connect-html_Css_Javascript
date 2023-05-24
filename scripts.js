@@ -111,6 +111,10 @@ const settingsCancel = document.querySelector('[data-settings-cancel]');
 const applyDayTheme = () => {
   document.body.style.backgroundColor = day.backgroundColor;
   document.body.style.color = day.color;
+ /* for (let i = 0; i < books.length; i++) { // Blue button
+  const button = document.querySelector('.preview')
+  button.style.backgroundColor = 'blue'
+  }*/
   localStorage.setItem('theme', 'day');
 };
 
