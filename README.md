@@ -2,8 +2,7 @@
 Sumaiya Mohamed
 
 ## Title: 
- Sumaiya-Mohamed/SUMMOH081_FTC2301_GROUPB_SumaiyaMohamed_ITW19
-  _(Book Connect App)_
+  _Book Connect App_
 
 ## Technologies Used:
 * HTML
