@@ -22,3 +22,12 @@ Sumaiya Mohamed
 1. **Comprehensive Book Information** : Book Connect offers detailed book information at your fingertips. Each book entry includes essential details such as author, published date, title, and a summary. This way, you can quickly assess the relevance and appeal of a book before deciding to delve into it.
 
 1. **User-Friendly Interface** : The intuitive layout and smooth navigation ensure a seamless and enjoyable experience while interacting with the app.
+
+## Requirements:
+* Live sever extension.
+
+## How to use: 
+1. Download the file.
+1. Extract the file.
+1. Open in vscode.
+1. Open live server.
