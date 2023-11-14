@@ -21,10 +21,10 @@ previewElements.forEach((previewElement) => {
   //This part of the code deals with the genre options and adds them to the 
 //select field and also adds the All genres option.
 const genreHtml = document.createDocumentFragment();
-const firstGenreElement = document.createElement('option')
-firstGenreElement.value = 'any';
-firstGenreElement.innerText = 'All Genres'
-genreHtml.appendChild(firstGenreElement);
+const firstGenre = document.createElement('option')
+firstGenre.value = 'any';
+firstGenre.innerText = 'All Genres'
+genreHtml.appendChild(firstGenre);
 html.search.genreSelect.appendChild(genreHtml)
 
 Object.entries(genres).map(([value, text]) => {
