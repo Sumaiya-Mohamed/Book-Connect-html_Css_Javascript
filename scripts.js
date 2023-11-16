@@ -201,7 +201,7 @@ html.search.form.addEventListener('submit', handleSearchForm)
       };
       
       const handleReload = () => {
-        if (matches.length === 0) {
+        if (matches.length - (page * BOOKS_PER_PAGE) <= 0) {
           location.reload();
         }
       };
