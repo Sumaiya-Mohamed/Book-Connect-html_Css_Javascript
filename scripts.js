@@ -156,8 +156,12 @@ html.settings.form.addEventListener('submit', handleThemeSettings)
 
     html.main.loadMoreButton.innerHTML = `
         <span>Show more</span>
-        <span class="list__remaining"> (${(matches.length - (page * BOOKS_PER_PAGE)) > 0 ? (matches.length - (page * BOOKS_PER_PAGE)) : 0})</span>
+        <span class="list__remaining"> (${(matches.length - (page * BOOKS_PER_PAGE)) > 0 ? (matches.length - (page * BOOKS_PER_PAGE)): 0})</span>
     `
+   
+    if (matches.length - (page * BOOKS_PER_PAGE) <= 0) {
+        html.main.loadMoreButton.innerHTML = 'Back';
+      }
 
     window.scrollTo({top: 0, behavior: 'smooth'});
     html.search.overlay.open = false
@@ -170,32 +174,45 @@ html.search.form.addEventListener('submit', handleSearchForm)
     //This function handles the displaying of more books
     // and handles the show more button.
     const loadMoreBooks = () => {
-      const fragment = document.createDocumentFragment();
-      const startIndex = page * BOOKS_PER_PAGE; // get the starting index of the books to render
-      const endIndex = startIndex + BOOKS_PER_PAGE; // get the ending index of the books to render
-    
-      const previewElements = matches.slice(startIndex, endIndex).map((book) => createPreviewElement(book));
-      previewElements.forEach((previewElement) => {
-        fragment.appendChild(previewElement);
+        const fragment = document.createDocumentFragment();
+        const startIndex = page * BOOKS_PER_PAGE;
+        const endIndex = startIndex + BOOKS_PER_PAGE;
+      
+        const previewElements = matches.slice(startIndex, endIndex).map((book) => createPreviewElement(book));
+        previewElements.forEach((previewElement) => {
+          fragment.appendChild(previewElement);
+        });
+      
+        html.main.booksDiv.appendChild(fragment);
+      
+        page += 1;
+      
+        if (matches.length <= page * BOOKS_PER_PAGE) {
+          html.main.loadMoreButton.style.display = 'none';
+        } else {
+          html.main.loadMoreButton.style.display = 'display';
+      
+          if (endIndex <= 0) {
+            html.main.loadMoreButton.innerHTML = 'Back';
+          } else {
+            html.main.loadMoreButton.innerHTML = `Show more (${matches.length - endIndex})`;
+          }
+        }
+      };
+      
+      const handleReload = () => {
+        if (matches.length === 0) {
+          location.reload();
+        }
+      };
+      
+      html.main.loadMoreButton.addEventListener('click', () => {
+        if (html.main.loadMoreButton.innerHTML === 'Back') {
+          handleReload();
+        } else {
+          loadMoreBooks();
+        }
       });
-    
-      html.main.booksDiv.appendChild(fragment);
-    
-      page += 1;
-    
-      if (matches.length <= page * BOOKS_PER_PAGE) {
-        html.main.loadMoreButton.style.display = 'none'; // hide the "Load more" button if there are no more books
-      }
-       else{
-        html.main.loadMoreButton.innerHTML = `Show more (${matches.length - endIndex})`;
-      }
-    };
-    
-    html.main.loadMoreButton.addEventListener('click', loadMoreBooks);
-   
-    
-
-
 
 
 // The code below handles displaying the active book's information.
