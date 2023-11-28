@@ -8,6 +8,10 @@ Sumaiya Mohamed
 * HTML
 * CSS 
 * JavaScript
+* Figma
+
+##Design:
+https://www.figma.com/file/hrpqHnTHH1Ems9wMU0EBOH/Book-connect?type=design&mode=design&t=Ely1ijIgbE2TFaY1-1
 
 ## Description:
   Book Connect is a versatile book app that makes finding new books easier for new readers or bookworms. With its intuitive interface and powerful features, Book Connect helps you explore, filter, and access comprehensive information about a vast collection of books. 
