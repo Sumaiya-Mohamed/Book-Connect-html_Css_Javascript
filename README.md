@@ -1,4 +1,4 @@
-# Welcome to Book Connect 👋 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Sumaiya-Mohamed_Book-Connect-html_Css_Javascript&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Sumaiya-Mohamed_Book-Connect-html_Css_Javascript)
+# Welcome to Book Connect 👋 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Sumaiya-Mohamed_Book-Connect-html_Css_Javascript&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Sumaiya-Mohamed_Book-Connect-html_Css_Javascript)   [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=kantord_badges&metric=bugs)](https://sonarcloud.io/summary/new_code?id=kantord_badges)
 ![Image of the book connect app running through the live server extension](./images/AppUi.png)
 
 ## Author:  
