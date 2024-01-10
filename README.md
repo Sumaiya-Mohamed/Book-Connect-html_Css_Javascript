@@ -1,4 +1,4 @@
-## Welcome to Book Connect
+# Welcome to Book Connect 👋
 ![Image of the book connect app running through the live server extension](./images/AppUi.png)
 
 ## Author:  
