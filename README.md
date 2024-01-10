@@ -1,5 +1,9 @@
+# Welcome to Book Connect 👋
+![Image of the book connect app running through the live server extension](./images/AppUi.png)
+
 ## Author:  
 Sumaiya Mohamed
+
 
 ## Title: 
   _Book Connect App_
@@ -34,3 +38,6 @@ https://www.figma.com/file/hrpqHnTHH1Ems9wMU0EBOH/Book-connect?type=design&mode=
 1. Extract the file.
 1. Open in vscode.
 1. Open live server.
+
+## Contact Details:
+Email: sumaiyamohamed58@gmail.com
